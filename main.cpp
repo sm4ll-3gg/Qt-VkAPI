@@ -1,11 +1,13 @@
-#include "vk_api.h"
+#include "vk_apiview.h"
 #include <QApplication>
+
+// TODO: Catch auth errors
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Vk_API w;
-    w.show();
+    Vk_APIView view;
+    view.show();
 
     return a.exec();
 }

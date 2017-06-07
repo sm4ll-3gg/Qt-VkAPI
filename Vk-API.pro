@@ -24,8 +24,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        vk_api.cpp \
-    httprequest.cpp
+    httprequest.cpp \
+    vk_apiview.cpp \
+    vkauth.cpp \
+    vkrequest.cpp
 
-HEADERS  += vk_api.h \
-    httprequest.h
+HEADERS  += \
+    httprequest.h \
+    vk_apiview.h \
+    vkauth.h \
+    vkrequest.h
+
+FORMS += \
+    vk_apiview.ui

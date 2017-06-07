@@ -16,6 +16,7 @@ HttpRequest::~HttpRequest()
 
 void HttpRequest::slotRequestFinished(QNetworkReply *reply)
 {
+    qDebug() << "Request finished";
     if(reply->error() != QNetworkReply::NoError)
         emit error(reply->errorString());
     else
@@ -39,7 +40,7 @@ QUrl HttpRequest::addParametres(const QUrl& url, const Parametres &param)
 void HttpRequest::get(const QUrl &url, const Parametres& parametres,
                       const Headers& headers)
 {
-    QUrl resUrl;
+    QUrl resUrl(url);
     if(!parametres.isEmpty())
         resUrl = addParametres(url, parametres);
 
